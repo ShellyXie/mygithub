@@ -1,0 +1,10 @@
+//为仓库指定用户名和邮箱
+qiuying@qiuying-5520 MINGW64 /c/mygithub
+$ git config --global user.name "ShellyXie"
+
+qiuying@qiuying-5520 MINGW64 /c/mygithub
+$ git config --global user.email "xqy_0077@163.com"
+//将当前目录变成git仓库
+qiuying@qiuying-5520 MINGW64 /c/mygithub
+$ git init
+Initialized empty Git repository in C:/mygithub/.git/
