@@ -4,12 +4,18 @@ $ git config --global user.name "ShellyXie"
 
 qiuying@qiuying-5520 MINGW64 /c/mygithub
 $ git config --global user.email "xqy_0077@163.com"
+
+
 //将当前目录变成git仓库
 qiuying@qiuying-5520 MINGW64 /c/mygithub
 $ git init
+
+
 //添加文件到暂存区
 qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
 $ git add git使用教程.txt
+
+
 //提交文件到仓库
 qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
 $ git commit -m "git使用教程.txt提交"
@@ -17,6 +23,7 @@ $ git commit -m "git使用教程.txt提交"
  1 file changed, 10 insertions(+)
  create mode 100644 "git\344\275\277\347\224\250\346\225\231\347\250\213.txt"
 
+ 
 //查看文件状态，是否修改或提交
 qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
 $ git status
@@ -28,6 +35,7 @@ Changes not staged for commit:
         modified:   "git\344\275\277\347\224\250\346\225\231\347\250\213.txt"
 
 no changes added to commit (use "git add" and/or "git commit -a")
+
 
 //查看文件修改内容，退出ctrl+c
 qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
@@ -55,3 +63,49 @@ index f84ed4c..906f88a 100644
 +qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
 +$ git status
 :
+
+
+//查看文件日志，显示每次commit
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ git log
+commit 9ff6f4c8470af1650fce228ad1328375e46487b1
+Author: ShellyXie <xqy_0077@163.com>
+Date:   Thu Jul 27 10:25:28 2017 +0800
+
+    git使用教程.txt修改
+
+commit 03c53468f441967c065c3120a003ffc73afed9dd
+Author: ShellyXie <xqy_0077@163.com>
+Date:   Thu Jul 27 10:07:07 2017 +0800
+
+    git使用教程.txt提交
+//日志一行显示
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ git log --pretty=oneline
+9ff6f4c8470af1650fce228ad1328375e46487b1 git使用教程.txt修改
+03c53468f441967c065c3120a003ffc73afed9dd git使用教程.txt提交
+
+	
+	
+//回退上一次提交，一次^两次^^多次HEAD~num
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ git reset --hard HEAD^
+HEAD is now at 03c5346 git使用教程.txt提交
+
+
+//cat 显示文件内容
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ cat git使用教程.txt
+
+
+//撤销回退，首先通过reflog获取版本号
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ git reflog
+03c5346 HEAD@{0}: reset: moving to HEAD^
+9ff6f4c HEAD@{1}: commit: git使用教程.txt修改
+03c5346 HEAD@{2}: commit (initial): git使用教程.txt提交
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ git reset --hard 9ff6f4c
+HEAD is now at 9ff6f4c git使用教程.txt修改
+
+
