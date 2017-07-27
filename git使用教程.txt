@@ -7,4 +7,51 @@ $ git config --global user.email "xqy_0077@163.com"
 //将当前目录变成git仓库
 qiuying@qiuying-5520 MINGW64 /c/mygithub
 $ git init
-Initialized empty Git repository in C:/mygithub/.git/
+//添加文件到暂存区
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ git add git使用教程.txt
+//提交文件到仓库
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ git commit -m "git使用教程.txt提交"
+[master (root-commit) 03c5346] git使用教程.txt提交
+ 1 file changed, 10 insertions(+)
+ create mode 100644 "git\344\275\277\347\224\250\346\225\231\347\250\213.txt"
+
+//查看文件状态，是否修改或提交
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   "git\344\275\277\347\224\250\346\225\231\347\250\213.txt"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+//查看文件修改内容，退出ctrl+c
+qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
+$ git diff git使用教程.txt
+diff --git "a/git\344\275\277\347\224\250\346\225\231\347\250\213.txt" "b/git\344\275\277\347\224\250\346\225\231\347\250\213.txt"
+index f84ed4c..906f88a 100644
+--- "a/git\344\275\277\347\224\250\346\225\231\347\250\213.txt"
++++ "b/git\344\275\277\347\224\250\346\225\231\347\250\213.txt"
+@@ -7,4 +7,24 @@ $ git config --global user.email "xqy_0077@163.com"
+ //将当前目录变成git仓库
+ qiuying@qiuying-5520 MINGW64 /c/mygithub
+ $ git init
+-Initialized empty Git repository in C:/mygithub/.git/
++//添加文件到暂存区
++qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
++$ git add git使用教程.txt
++//提交文件到仓库
++qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
++$ git commit -m "git使用教程.txt提交"
++[master (root-commit) 03c5346] git使用教程.txt提交
++ 1 file changed, 10 insertions(+)
++ create mode 100644 "git\344\275\277\347\224\250\346\225\231\347\250\213.txt"
++
++//查看文件状态，是否修改或提交
++qiuying@qiuying-5520 MINGW64 /c/mygithub (master)
++$ git status
+:
