@@ -71,7 +71,7 @@ void hardcode_secret() {
 // 漏洞 8：释放后使用（UAF）
 void use_after_free() {
   int *data = (int *)malloc(4);
-  free(data);
+  // free(data);
   *data = 100; // ❌ 内存已释放仍使用
 }
 
